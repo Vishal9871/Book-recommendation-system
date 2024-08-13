@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover your next favorite book with BookMatch, a personalized book recommendation system.">
+    <title>Book recommendation System</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="icon" href="book.jpg">
+</head>
+<body>
+    <header>
+        <h1>BookMatch</h1> 
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#preferences">Preferences</a></li>
+                <li><a href="#recommendations">Recommendations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="active">
+            <h2>Welcome to BookMatch</h2>
+            <p>Discover your next favorite book with our personalized recommendation system.</p>
+        </section>
+
+
+        <section id="preferences">
+            <h2>Book Preferences</h2>
+            <form id="preferencesForm">
+                <label for="genres">Favorite Genres:</label>
+                <select id="genres" multiple required>
+                    <option value="Fiction">Fiction</option>
+                    <option value="Non-fiction">Non-fiction</option>
+                    <option value="Mystery">Mystery</option>
+                    <option value="Science Fiction">Science Fiction</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Historical Fiction">Historical Fiction</option>
+                </select>
+
+                <label for="authors">Favorite Authors (comma-separated):</label>
+                <input type="text" id="authors" placeholder="e.g. J.K. Rowling, Stephen King">
+
+                <label for="readingLevel">Reading Level:</label>
+                <select id="readingLevel" required>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+
+                <label for="bookLength">Preferred Book Length:</label>
+                <select id="bookLength" required>
+                    <option value="short">Short (< 300 pages)</option>
+                    <option value="medium">Medium (300-500 pages)</option>
+                    <option value="long">Long (> 500 pages)</option>
+                </select>
+
+                <button type="submit">Get Recommendations</button>
+            </form>
+        </section>
+
+        <section id="recommendations">
+            <!-- Book recommendations will be dynamically inserted here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BookMatch - Find Your Perfect Read</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
